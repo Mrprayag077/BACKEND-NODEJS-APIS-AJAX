@@ -20,7 +20,7 @@ app.use(cors());
 // app.use(express.static('/assets'));
 
 
-app.set('views', 'https://frontend-bfyn.onrender.com/');
+// app.set('views', 'https://frontend-bfyn.onrender.com/');
 
 app.set('view engine', 'ejs');
 
