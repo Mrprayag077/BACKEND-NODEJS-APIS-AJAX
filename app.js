@@ -42,6 +42,8 @@ console.log("HIIIIIIIIIIIIIIIIIIIIIIIIII=");
 // finally{ await client.close(); }
 // main();
 
+app.set('views', 'https://frontend-bfyn.onrender.com');
+app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
