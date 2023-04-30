@@ -19,7 +19,7 @@ const path = require('path');
 
 // app.use(express.static('/assets'));
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 
 
@@ -49,7 +49,7 @@ app.get("/", function (req, res) {
     // res.send("hello world")
     // res.render("index");
     // res.sendFile(path.join(__dirname, '/index.html'));
-    res.redirect('https://mrprayag077.github.io/frontend/index.html');
+    res.redirect('https://frontend-bfyn.onrender.com/');
 });
 
 app.post("/", function (req, res) {
