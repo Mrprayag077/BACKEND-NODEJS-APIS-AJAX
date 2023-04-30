@@ -1,4 +1,4 @@
-
+const http = require('http');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -11,6 +11,9 @@ const ejs = require("ejs");
 const app = express();
 const { response } = require("express");
 var jsonParser = bodyParser.json();
+const server = http.createServer(app);
+
+
 
 // app.use(express.static('/assets'));
 
@@ -36,6 +39,7 @@ console.log("HIIIIIIIIIIIIIIIIIIIIIIIIII=");
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(bodyParser.json());
 
 
@@ -137,9 +141,8 @@ app.post("/", function (req, res) {
 
 
 
-
-
-app.listen(process.env.PORT || 5000, function (req, res) {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
     console.log("https://localhost:9000/");
 });
 
