@@ -20,9 +20,6 @@ app.use(cors());
 // app.use(express.static('/assets'));
 
 
-app.set('views', 'https://frontend-bfyn.onrender.com/');
-
-app.set('view engine', 'ejs');
 
 app.use(cors({
     origin: '*'
@@ -53,7 +50,7 @@ app.use(bodyParser.json());
 
 app.get("/", function (req, res) {
     // res.send("hello world")
-    res.render("index");
+   // res.render("index");
     // res.sendFile(path.join(__dirname, '/index.html'));
     res.redirect('https://frontend-bfyn.onrender.com/');
 });
