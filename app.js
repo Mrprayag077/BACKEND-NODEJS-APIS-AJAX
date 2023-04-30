@@ -1,3 +1,5 @@
+
+
 const dotenv = require('dotenv');
 dotenv.config();
 const express = require("express");
@@ -15,16 +17,14 @@ var jsonParser = bodyParser.json();
 app.set('view engine', 'ejs');
 
 
-const PORT = process.env.PORT || 3000;
 
 // async function main() {
-mongoose.connect('mongodb+srv://prayag_SIHH:pp1234@cluster0.tuna9.mongodb.net/tutorial?retryWrites=true&w=majority',
+const MONGO_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tuna9.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+mongoose.connect(MONGO_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
-
-
 console.log("HIIIIIIIIIIIIIIIIIIIIIIIIII=");
 
 
@@ -139,10 +139,9 @@ app.post("/", function (req, res) {
 
 
 
-app.listen(PORT, () => {
-    console.log(`server started on port ${PORT}`);
+app.listen(process.env.PORT || 5000, function (req, res) {
+    console.log("https://localhost:9000/");
 });
-
 
 
 
