@@ -42,8 +42,7 @@ console.log("HIIIIIIIIIIIIIIIIIIIIIIIIII=");
 // finally{ await client.close(); }
 // main();
 
-app.set('views', 'https://frontend-bfyn.onrender.com');
-app.set('view engine', 'ejs');
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -53,9 +52,9 @@ app.use(bodyParser.json());
 
 app.get("/", function (req, res) {
     // res.send("hello world")
-   res.render("index");
+   //res.render("index");
     // res.sendFile(path.join(__dirname, '/index.html'));
-   // res.redirect('https://frontend-bfyn.onrender.com/');
+    res.redirect('https://frontend-bfyn.onrender.com/');
 });
 
 app.post("/", function (req, res) {
