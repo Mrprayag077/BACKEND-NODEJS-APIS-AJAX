@@ -49,7 +49,7 @@ app.get("/", function (req, res) {
     // res.send("hello world")
     // res.render("index");
     // res.sendFile(path.join(__dirname, '/index.html'));
-    res.sendFile('https://mrprayag077.github.io/frontend/index.html');
+    res.redirect('https://mrprayag077.github.io/frontend/index.html');
 });
 
 app.post("/", function (req, res) {
