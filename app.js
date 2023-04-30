@@ -19,7 +19,10 @@ const cors = require("cors");
 app.use(cors());
 // app.use(express.static('/assets'));
 
-// app.set('view engine', 'ejs');
+
+app.set('views', 'https://frontend-bfyn.onrender.com/');
+
+app.set('view engine', 'ejs');
 
 app.use(cors({
     origin: '*'
