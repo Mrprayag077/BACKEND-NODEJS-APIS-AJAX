@@ -53,9 +53,9 @@ app.use(bodyParser.json());
 
 app.get("/", function (req, res) {
     // res.send("hello world")
-   // res.render("index");
+   res.render("index");
     // res.sendFile(path.join(__dirname, '/index.html'));
-    res.redirect('https://frontend-bfyn.onrender.com/');
+   // res.redirect('https://frontend-bfyn.onrender.com/');
 });
 
 app.post("/", function (req, res) {
