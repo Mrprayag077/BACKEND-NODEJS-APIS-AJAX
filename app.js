@@ -13,14 +13,17 @@ const { response } = require("express");
 var jsonParser = bodyParser.json();
 const server = http.createServer(app);
 const path = require('path');
+const cors = require("cors");
 
 
-
-
+app.use(cors());
 // app.use(express.static('/assets'));
 
 // app.set('view engine', 'ejs');
 
+app.use(cors({
+    origin: '*'
+}));
 
 
 // async function main() {
